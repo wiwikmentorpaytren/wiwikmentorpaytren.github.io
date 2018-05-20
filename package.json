@@ -1,6 +1,6 @@
 {
     "title": "Landing Page",
-    "name": "startbootstrap-landing-page",
+    "name": "MyLandingPage1",
     "version": "4.1.1",
     "description": "An HTML landing page template built with Bootstrap",
     "keywords": [
@@ -11,19 +11,15 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/landing-page",
-    "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-landing-page/issues",
-        "email": "feedback@startbootstrap.com"
-    },
+    "homepage": "https://github.com/msatyan/MyLandingPage1",
     "license": "MIT",
     "author": "Start Bootstrap",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "Satyan"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-landing-page.git"
+        "url": "https://github.com/msatyan/MyLandingPage1.git"
     },
     "dependencies": {
         "bootstrap": "4.1.1",
