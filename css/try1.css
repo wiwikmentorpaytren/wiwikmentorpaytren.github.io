@@ -1,15 +1,15 @@
 /* Style the navbar */
-#mynavbar1 {
+#myskickynavbar1 {
     overflow: hidden;
     background-color: #333;
     z-index: 999; /* To make it on top of all*/
   }
   
   /* Navbar links */
-  #mynavbar1 a {
+  #myskickynavbar1 a {
     float: left;
     display: block;
-    color: blue;
+    color: white;
     text-align: center;
     padding: 14px;
     text-decoration: none;

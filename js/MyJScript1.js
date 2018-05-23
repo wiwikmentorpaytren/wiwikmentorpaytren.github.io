@@ -34,10 +34,10 @@ const pagCtl = new MyPageController();
 // $(document).ready(  function ()
 $(() => {
     // window.onscroll = pagCtl.MyStickyNavbar("navbar");
-    window.onscroll = function() { pagCtl.MyStickyNavbar("mynavbar1") };
+    window.onscroll = function() { pagCtl.MyStickyNavbar("myskickynavbar1") };
 
     // If the page is already scrolled down more than the nave bar, it will set
-    pagCtl.MyStickyNavbar("mynavbar1");
+    pagCtl.MyStickyNavbar("myskickynavbar1");
 });
 
 
