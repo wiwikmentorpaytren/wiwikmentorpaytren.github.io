@@ -1,21 +1,15 @@
 
-.simple-linear1 {
-  /*
-  background: linear-gradient(blue, pink);
-  */
-  background: linear-gradient(to right,blue,indigo);
-}
-
 
 /* Style the navbar */
-#myskickynavbar1 {
+.myskickynavbar {
     overflow: hidden;
-    background-color: #333;
-    z-index: 999; /* To make it on top of all*/
+    /* background-color: #333; */
+    background: linear-gradient(to right,blue,indigo);
+    z-index: 99; /* To make it on top of all*/
   }
   
   /* Navbar links */
-  #myskickynavbar1 a {
+  .myskickynavbar a {
     float: left;
     display: block;
     color: white;
@@ -56,10 +50,17 @@ background-size: cover;
 
 padding-top: 2rem;
 padding-bottom: 2rem;
-
 /*
   height: 150px; 
   width: 100%;
 */
-
 }
+
+
+.btn-size-sticky-navbar {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.1;
+  border-radius: 0.2rem;
+}
+
