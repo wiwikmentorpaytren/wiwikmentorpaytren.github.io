@@ -2,10 +2,15 @@
 
 /* Style the navbar */
 .myskickynavbar {
+  /*
     overflow: hidden;
+    */
     /* background-color: #333; */
+    /*
     background: linear-gradient(to right,blue,indigo);
-    z-index: 99; /* To make it on top of all*/
+    */
+    
+    z-index: 99;  /* To make it on top of all*/
   }
   
   /* Navbar links */
@@ -22,7 +27,11 @@
   .content {
     padding: 16px;
   }
-  
+
+  .ontop-all {
+    z-index: 99;  /* To make it on top of all*/
+  }
+
   /* The sticky class is added to the navbar with JS when it reaches its scroll position */
   .sticky {
     position: fixed;
@@ -30,6 +39,8 @@
     width: 100%
   }
   
+
+
   /* 
   Add some top padding to the page content to prevent sudden quick movement 
   (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) 
