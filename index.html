@@ -18,11 +18,6 @@
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
 
   <!--
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-  -->
-
-  <!-- Custom styles for this template -->
-  <!--
   <link href="css/landing-page.min.css" rel="stylesheet">
   -->
   <link href="css/landing-page.css" rel="stylesheet">
@@ -31,30 +26,28 @@
 </head>
 
 <body>
-  <!-- If it is Top Navigation then here-->
-
-
 
   <!-- Masthead -->
 
   <header class="masthead text-white text-center">
     <div class="overlay"></div>
     <div class="container">
-
       <div class="row">
         <div class="col-xl-9 mx-auto">
           <h5 class="mb-5">Have a nice landing page for your business!</h5>
         </div>
       </div>
-
-
     </div>
   </header>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ontop-all" id="myskickynavbar1">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ontop-all" id="myskickynavbar1">
     <div class="container">
+      
+      <!--
       <a class="navbar-brand" href="#">My Company!</a>
+      -->
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -62,45 +55,48 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+
           <li class="nav-item active">
             <a class="nav-link" href="#">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Products
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarProducts">
+              <a class="dropdown-item" href="#">CD</a>
+              <a class="dropdown-item" href="#">DVD</a>
+              <a class="dropdown-item" href="#">BlueRay</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">SSD</a>
+              <a class="dropdown-item" href="#">HDD</a>
+            </div>
           </li>
 
           <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                Products
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarProducts">
-                <a class="dropdown-item" href="#">CD</a>
-                <a class="dropdown-item" href="#">DVD</a>
-                <a class="dropdown-item" href="#">BlueRay</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">SSD</a>
-                <a class="dropdown-item" href="#">HDD</a>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarServices" role="button" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">
-                  Services
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarServices">
-                  <a class="dropdown-item" href="#">Copy</a>
-                  <a class="dropdown-item" href="#">Backup</a>
-                  <a class="dropdown-item" href="#">Zip</a>
-                </div>
-              </li>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarServices" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarServices">
+              <a class="dropdown-item" href="#">Copy</a>
+              <a class="dropdown-item" href="#">Backup</a>
+              <a class="dropdown-item" href="#">Zip</a>
+            </div>
+          </li>
 
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link" href="#">About</a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Contact Us</a>
+          </li>
+
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
