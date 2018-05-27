@@ -2,7 +2,7 @@
     "title": "Landing Page",
     "name": "MyLandingPage1",
     "version": "4.1.1",
-    "description": "An HTML landing page template built with Bootstrap",
+    "description": "A simple mobile friendly landing page with responsive web design by using Bootstrap and JQuery",
     "keywords": [
         "css",
         "sass",
@@ -13,7 +13,7 @@
     ],
     "homepage": "https://github.com/msatyan/MyLandingPage1",
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "Satyan",
     "contributors": [
         "Satyan"
     ],

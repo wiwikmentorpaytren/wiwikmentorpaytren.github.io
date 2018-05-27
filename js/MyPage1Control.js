@@ -1,3 +1,9 @@
+/*
+The MIT License (MIT)
+
+Copyright (c) 2018 Sathyanesh Krishnan
+*/
+
 class MyPageController
 {
     // if you need block scope thn declare with 'let' or 'const' else 'var'
@@ -7,12 +13,10 @@ class MyPageController
         this.Navbar1 = undefined;
     }
 
-
     MyStickyNavbar( NavBarID )
     {
         if( this.NavbarOffsetTop == undefined)
         {
-            // if you need block scope thn declare with 'let' or 'const' else 'var'
             this.Navbar1 = document.getElementById( NavBarID );
             this.NavbarOffsetTop = this.Navbar1.offsetTop;
         }
@@ -33,27 +37,8 @@ const pagCtl = new MyPageController();
 // jQuery document ready
 // $(document).ready(  function ()
 $(() => {
-    // window.onscroll = pagCtl.MyStickyNavbar("navbar");
     window.onscroll = function() { pagCtl.MyStickyNavbar("myskickynavbar1") };
 
     // If the page is already scrolled down more than the nave bar, it will set
     pagCtl.MyStickyNavbar("myskickynavbar1");
 });
-
-
-
-
-/*
-// Other options
-$(document).ready(function () {
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > SomeValue) {
-            $('.navbar').addClass('navbar-fixed-top');
-        }
-
-        if ($(window).scrollTop() < SomeValue + 1) {
-            $('.navbar').removeClass('navbar-fixed-top');
-        }
-    });
-});
-*/
