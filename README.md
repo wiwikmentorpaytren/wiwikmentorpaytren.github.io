@@ -2,9 +2,12 @@
 ## Simple Landing Page 
 A simple and clean mobile friendly landing page with responsive web design by using Bootstrap and JQuery along with a bit of sweetener by using Font Awesome and Simple Line Icons. This page is built on top of the awesome project framework created by [Start Bootstrap](https://github.com/BlackrockDigital/startbootstrap-landing-page), which gives a nice web development infrastructure such as automatic transpiling of SCSS during development with gulp. The basic page provided by Bootstrap has been enhance to add sticky navbar, carousel etc.
 
+## Snapshot 
+![Landing Page Snapshot](img/snapshot1.jpg?raw=true)
 
 ### Usage
 The page is expected to work Out of the Box, just clone the repository and launch the **index.html** in a browser. For the development setup please follow the steps mentioned bellow. 
+
 
 
 ### Development
