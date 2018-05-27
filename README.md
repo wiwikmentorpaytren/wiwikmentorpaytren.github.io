@@ -2,10 +2,10 @@
 ## [Simple Landing Page](https://msatyan.github.io/MyLandingPage1/)
 A simple and clean mobile friendly landing page with responsive web design by using Bootstrap and JQuery along with a bit of sweetener by using Font Awesome and Simple Line Icons. This page is built on top of the awesome project framework created by [Start Bootstrap](https://github.com/BlackrockDigital/startbootstrap-landing-page), which gives a nice web development infrastructure such as automatic transpiling of SCSS during development with gulp. The basic page provided by Bootstrap has been enhance to add sticky navbar, carousel etc.  
 
-##### You may try a [Live Demo](https://msatyan.github.io/MyLandingPage1/)  
-
+##### [Live Demo](https://msatyan.github.io/MyLandingPage1/)  
+<!--
 ![Snapshot of it is](img/snapshot1.jpg?raw=true)
-
+-->
 
 ---
 
