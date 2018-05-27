@@ -15,7 +15,26 @@ h6 {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../img/bg-masthead.jpg") no-repeat center center;
+  /*
+  https://webgradients.com/
+  background: url('../img/bg-masthead.jpg') no-repeat center center;
+  background-image: linear-gradient(#ff9d2f, #ff6126);
+  background-image: linear-gradient(indigo, blue);
+  background-image: linear-gradient(#667db6,#0082c8);
+  background-image: linear-gradient(to right, #e1eec3, #f05053);
+  background-image: linear-gradient(to right, #0082c8, #667db6);
+  background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+  background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-image: linear-gradient(to right, #2575fc 0%, #6a11cb 100%);
+  background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+  background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+  background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  */
+  background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
