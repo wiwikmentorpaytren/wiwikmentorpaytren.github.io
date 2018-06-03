@@ -139,6 +139,33 @@ gulp.task('dev', ['css', 'browserSync'], function() {
   MyWatch( bases.dev )
 });
 
+
+//////// Prepare assets for production ////////////////////////
+
+// DELETE SHOULD BE COMPLETED BEFORE START OF ANY OTHER TASK.
+
+// Gulp 4 has a better approach for this, but it is on alpha, so we have to use Gulp-3
+// Gulp 3 this is what we need to do to 
+// By default, tasks run with maximum concurrency -- 
+// e.g. it launches all the tasks at once and waits for nothing. 
+// If we want to create a series where tasks run in a particular order, we need to do two things:
+// 1) give it a hint to tell it when the task is done,
+// 2) and give it a hint that a task depends on completion of another.
+
+// takes in a callback so the engine knows when it'll be done
+gulp.task('cleandist', function (cb) 
+{
+  //  "**" to deletes all the subdirectories too
+  del([ bases.dist + '/**',
+        bases.dist + '/*']).then(paths => {
+      console.log('Deleted files and folders:\n', paths.join('\n'));
+
+      // if the value we return not null or not undefined, 
+      // the orchestration will stop, and 'two' will not run
+      cb(null);
+    });
+});
+
 function CopyDev2Dist(divdir, distdir)
 {
   // vendor
@@ -162,7 +189,8 @@ function CopyDev2Dist(divdir, distdir)
   .pipe(gulp.dest( distdir + '/'))
 }
 
-
-gulp.task('dist', function() {
+// Tell this task it is dependent on cleandist task, and
+// it must be complete before this one begins
+gulp.task('dist', ['cleandist'], function() {
   CopyDev2Dist( bases.dev, bases.dist );
 });
