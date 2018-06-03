@@ -22,51 +22,55 @@ var bases = {
   dist: './dist',
  };
 
-// Copy third party libraries from /node_modules into /vendor
-gulp.task('vendor', function() {
 
+ function vendor(bdir)
+ {
   // Bootstrap
   gulp.src([
-      './node_modules/bootstrap/dist/**/*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
-    ])
-    .pipe(gulp.dest('./vendor/bootstrap'))
+    './node_modules/bootstrap/dist/**/*',
+    '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
+    '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
+  ])
+  .pipe(gulp.dest( bdir + '/vendor/bootstrap'))
 
-  // Font Awesome
-  gulp.src([
-      './node_modules/font-awesome/**/*',
-      '!./node_modules/font-awesome/{less,less/*}',
-      '!./node_modules/font-awesome/{scss,scss/*}',
-      '!./node_modules/font-awesome/.*',
-      '!./node_modules/font-awesome/*.{txt,json,md}'
-    ])
-    .pipe(gulp.dest('./vendor/font-awesome'))
+// Font Awesome
+gulp.src([
+    './node_modules/font-awesome/**/*',
+    '!./node_modules/font-awesome/{less,less/*}',
+    '!./node_modules/font-awesome/{scss,scss/*}',
+    '!./node_modules/font-awesome/.*',
+    '!./node_modules/font-awesome/*.{txt,json,md}'
+  ])
+  .pipe(gulp.dest( bdir + '/vendor/font-awesome'))
 
-  // jQuery
-  gulp.src([
-      './node_modules/jquery/dist/*',
-      '!./node_modules/jquery/dist/core.js'
-    ])
-    .pipe(gulp.dest('./vendor/jquery'))
+// jQuery
+gulp.src([
+    './node_modules/jquery/dist/*',
+    '!./node_modules/jquery/dist/core.js'
+  ])
+  .pipe(gulp.dest( bdir + '/vendor/jquery'))
 
-  // jQuery Easing
-  gulp.src([
-      './node_modules/jquery.easing/*.js'
-    ])
-    .pipe(gulp.dest('./vendor/jquery-easing'))
+// jQuery Easing
+gulp.src([
+    './node_modules/jquery.easing/*.js'
+  ])
+  .pipe(gulp.dest( bdir + '/vendor/jquery-easing'))
 
-  // Simple Line Icons
-  gulp.src([
-      './node_modules/simple-line-icons/fonts/**',
-    ])
-    .pipe(gulp.dest('./vendor/simple-line-icons/fonts'))
+// Simple Line Icons
+gulp.src([
+    './node_modules/simple-line-icons/fonts/**',
+  ])
+  .pipe(gulp.dest( bdir + '/vendor/simple-line-icons/fonts'))
 
-  gulp.src([
-      './node_modules/simple-line-icons/css/**',
-    ])
-    .pipe(gulp.dest('./vendor/simple-line-icons/css'))
+gulp.src([
+    './node_modules/simple-line-icons/css/**',
+  ])
+  .pipe(gulp.dest( bdir + '/vendor/simple-line-icons/css'))
+ }
 
+// Copy third party libraries from /node_modules into /vendor
+gulp.task('vendor', function() {
+  vendor( bases.dev )
 });
 
 /////// Compile SCSS
@@ -75,7 +79,7 @@ function css_compile( bdir ) {
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
-    .pipe(gulp.dest(bdir + '/css'))
+    .pipe(gulp.dest( bdir + '/css'))
 }
 
 gulp.task('css:compile', function() {
