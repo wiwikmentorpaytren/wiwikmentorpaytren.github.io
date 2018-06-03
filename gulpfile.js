@@ -5,9 +5,22 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
-
-////////
 var del = require('del');
+
+/* Gulp Study 
+https://github.com/gulpjs/gulp
+
+https://fettblog.eu/gulp-4-parallel-and-series/
+https://www.youtube.com/watch?v=jgcfEhiCkG4
+https://gulpjs.org/recipes/running-tasks-in-series
+https://www.justinmccandless.com/post/a-tutorial-for-getting-started-with-gulp/
+*/
+
+
+var bases = {
+  dev: '.',
+  dist: './dist',
+ };
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
@@ -57,35 +70,35 @@ gulp.task('vendor', function() {
 });
 
 /////// Compile SCSS
-function css_compile( myaction ) {
+function css_compile( bdir ) {
   return gulp.src('./scss/**/*.scss')
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest(bdir + '/css'))
 }
 
 gulp.task('css:compile', function() {
-  css_compile('xyz');
+  css_compile( bases.dev );
 });
 
 
 ////// Minify CSS
-function css_minify(myaction) {
+function css_minify(bdir) {
   return gulp.src([
-      './css/*.css',
-      '!./css/*.min.css'
+      bdir +'/css/*.css',
+      '!' + bdir + '/css/*.min.css'
     ])
     .pipe(cleanCSS())
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest( bdir + '/css'))
     .pipe(browserSync.stream());
 }
 
 gulp.task('css:minify', ['css:compile'], function() {
-  css_minify('xyz');
+  css_minify( bases.dev );
 });
 
 
