@@ -6,6 +6,8 @@ var rename = require("gulp-rename");
 var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
 
+////////
+var del = require('del');
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
@@ -54,17 +56,22 @@ gulp.task('vendor', function() {
 
 });
 
-// Compile SCSS
-gulp.task('css:compile', function() {
+/////// Compile SCSS
+function css_compile( myaction ) {
   return gulp.src('./scss/**/*.scss')
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
     .pipe(gulp.dest('./css'))
+}
+
+gulp.task('css:compile', function() {
+  css_compile('xyz');
 });
 
-// Minify CSS
-gulp.task('css:minify', ['css:compile'], function() {
+
+////// Minify CSS
+function css_minify(myaction) {
   return gulp.src([
       './css/*.css',
       '!./css/*.min.css'
@@ -75,7 +82,12 @@ gulp.task('css:minify', ['css:compile'], function() {
     }))
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());
+}
+
+gulp.task('css:minify', ['css:compile'], function() {
+  css_minify('xyz');
 });
+
 
 // CSS
 gulp.task('css', ['css:compile', 'css:minify']);
