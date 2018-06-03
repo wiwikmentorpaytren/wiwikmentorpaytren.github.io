@@ -23,12 +23,27 @@ cd MyLandingPage1
 npm install
 ```
 
+
+
 ##### Active watch mode
-The following command will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the **gulpfile.js** to see which tasks are included with the dev environment.
+The following command will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the **gulpfile.js** to see which tasks are included with the dev environment. The project infrastructure has dependency on gulp
 
 ```bash
+# The project infrastructure has dependency on gulp, 
+# if you have not installed gulp, you you may install it by 
+# npm install -g gulp
+
 gulp dev
 ```
+
+
+### Distribute the asset to production 
+Prior to distributing the asset, make sure you have completed the testing, the **dist** copy the assets that you used during testing to dist folder. **FYI: the dist option will not regenerate the assets from its original source (eg: scss to css)**
+
+```bash
+gulp dist
+```
+
 
 #### HTML ID selectors used
 The 'index.html' is using following ID selectors.

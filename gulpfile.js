@@ -23,7 +23,7 @@ var bases = {
  };
 
 
- function vendor(bdir)
+ function PrepareVendorAssets(bdir)
  {
   // Bootstrap
   gulp.src([
@@ -70,7 +70,7 @@ gulp.src([
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
-  vendor( bases.dev )
+  PrepareVendorAssets( bases.dev )
 });
 
 /////// Compile SCSS
@@ -137,4 +137,32 @@ function MyWatch(bdir)
 
 gulp.task('dev', ['css', 'browserSync'], function() {
   MyWatch( bases.dev )
+});
+
+function CopyDev2Dist(divdir, distdir)
+{
+  // vendor
+  gulp.src( [ divdir + '/vendor/**/*' ])
+  .pipe(gulp.dest( distdir + '/vendor'))
+
+  // js
+  gulp.src( [ divdir + '/js/**' ])
+  .pipe(gulp.dest( distdir + '/js'))  
+
+  // css
+  gulp.src( [ divdir + '/css/**' ])
+  .pipe(gulp.dest( distdir + '/css'))
+  
+  // img
+  gulp.src( [ divdir + '/img/**' ])
+  .pipe(gulp.dest( distdir + '/img'))
+
+  // html
+  gulp.src( [ divdir + '/index.html' ])
+  .pipe(gulp.dest( distdir + '/'))
+}
+
+
+gulp.task('dist', function() {
+  CopyDev2Dist( bases.dev, bases.dist );
 });
