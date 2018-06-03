@@ -113,16 +113,28 @@ gulp.task('css', ['css:compile', 'css:minify']);
 gulp.task('default', ['css', 'vendor']);
 
 // Configure the browserSync task
-gulp.task('browserSync', function() {
+function MybrowserSync(bdir)
+{
   browserSync.init({
     server: {
-      baseDir: "./"
+      baseDir:  bdir + "/"
     }
   });
+}
+
+gulp.task('browserSync', function() {
+  MybrowserSync( bases.dev )
 });
 
-// Dev task
+////////////// Dev task
+function MyWatch(bdir)
+{
+  console.log( 'Base Dir used [' + bdir + ']' );
+
+  gulp.watch( bdir + '/scss/*.scss', ['css']);
+  gulp.watch( bdir + '/*.html', browserSync.reload);
+}
+
 gulp.task('dev', ['css', 'browserSync'], function() {
-  gulp.watch('./scss/*.scss', ['css']);
-  gulp.watch('./*.html', browserSync.reload);
+  MyWatch( bases.dev )
 });
