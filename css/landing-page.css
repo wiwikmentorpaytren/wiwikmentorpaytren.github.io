@@ -164,3 +164,11 @@ footer.footer {
   height: 16rem;
   max-height: 16rem;
 }
+
+.carousel-item img {
+  width: 100%;
+  max-height: 20rem;
+  background: cover;
+  object-fit: cover;
+  overflow: hidden;
+}
