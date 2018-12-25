@@ -172,3 +172,32 @@ footer.footer {
   object-fit: cover;
   overflow: hidden;
 }
+
+.arrow_box {
+	position: relative;
+	background: #fffcfd;
+	border: 1px dashed #f5a06e;
+}
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 252, 253, 0);
+	border-top-color: #fffcfd;
+	border-width: 30px;
+	margin-left: -30px;
+}
+.arrow_box:before {
+	border-color: rgba(245, 160, 110, 0);
+	border-top-color: #f5a06e;
+	border-width: 36px;
+	margin-left: -36px;
+}
