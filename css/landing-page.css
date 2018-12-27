@@ -176,7 +176,7 @@ footer.footer {
 .arrow_box {
 	position: relative;
 	background: #fffcfd;
-	border: 2px dashed #f5a06e;
+	border: 2px dashed #007bff;
 }
 .arrow_box:after, .arrow_box:before {
 	top: 100%;
