@@ -175,7 +175,7 @@ footer.footer {
 
 .arrow_box {
 	position: relative;
-	background: #fffcfd;
+	background: #f5a06e;
 	border: 2px dashed #007bff;
 }
 .arrow_box:after, .arrow_box:before {
@@ -191,7 +191,7 @@ footer.footer {
 
 .arrow_box:after {
 	border-color: rgba(255, 252, 253, 0);
-	border-top-color: #fffcfd;
+	border-top-color: #f5a06e;
 	border-width: 30px;
 	margin-left: -30px;
 }
