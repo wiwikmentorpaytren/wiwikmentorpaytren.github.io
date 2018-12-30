@@ -2,6 +2,8 @@
     $('body').addClass('is-loading');
     var menuSelector = $('#sidebar ul li a');
 
+    $('.my-paroller').paroller();
+    
     $(document)
         .ready(function () {
             if(window.location.hash) {
