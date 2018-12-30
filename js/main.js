@@ -4,6 +4,8 @@
 
     $('.my-paroller').paroller();
     
+    $('.mega').paroller();
+    
     $(document)
         .ready(function () {
             if(window.location.hash) {
