@@ -19,6 +19,8 @@ type: 'foreground',
 direction: 'horizontal'
 });
     
+    $("#my-element").paroller({ factor: 0.5, factorXs: 0.2, type: 'foreground', direction: 'horizontal' });
+    
     $(document)
         .ready(function () {
             if(window.location.hash) {
