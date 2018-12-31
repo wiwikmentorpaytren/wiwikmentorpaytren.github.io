@@ -219,5 +219,6 @@ footer.footer {
             position: fixed;
             right: 30px;
             bottom:30px;
+	    float: right;
         }
 .act-btn:hover{background: blue}
