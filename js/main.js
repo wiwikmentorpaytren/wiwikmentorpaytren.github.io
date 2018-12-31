@@ -6,6 +6,19 @@
     
     $('.mega').paroller();
     
+    $('.my-element').paroller();
+    
+    $('.paroller-example').paroller({
+factorXs: 0.1,
+factorSm: 0.1,
+factorMd: -0.4,
+factorLg: -0.5,
+factorXl: -0.6,
+factor: -0.4,
+type: 'foreground',
+direction: 'horizontal'
+});
+    
     $(document)
         .ready(function () {
             if(window.location.hash) {
