@@ -217,8 +217,7 @@ footer.footer {
             text-decoration: none;
             transition: ease all 0.3s;
             position: fixed;
-            left: 30px;
+            right: 30px;
             bottom:30px;
-	    float: left;
         }
 .act-btn:hover{background: blue}
