@@ -175,7 +175,7 @@ footer.footer {
 
 .arrow_box {
 	position: relative;
-	background: #007bff; /* url("https://raw.githubusercontent.com/paytrenindramayu/paytrenindramayu.github.io/master/img/bg.png"); */
+	background: url("https://raw.githubusercontent.com/paytrenindramayu/paytrenindramayu.github.io/master/img/bg.png"); 
 	border: 2px dashed #007bff;
 }
 .arrow_box:after, .arrow_box:before {
